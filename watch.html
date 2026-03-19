@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch - MyTube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium, sleek video sharing platform experience">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="header">
+        <div class="header-left">
+            <button class="menu-btn" title="Menu" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="index.html" class="logo-container" style="text-decoration: none;">
+                <div class="logo-icon"><i class="fas fa-play"></i></div>
+                <span class="logo-text">MyTube</span>
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search MyTube...">
+                <button class="search-button" id="searchBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="voice-search" id="voiceSearchBtn" title="Search with your voice">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <button class="nav-icon mobile-only-search" title="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="nav-icon hidden-mobile" title="Create">
+                <i class="fas fa-video"></i>
+            </button>
+            <button class="nav-icon" title="Notifications">
+                <i class="fas fa-bell"></i>
+                <div class="badge">9+</div>
+            </button>
+            <button class="nav-icon user-nav" title="Account">
+                <img src="https://ui-avatars.com/api/?name=UD&background=6c5ce7&color=fff" class="user-avatar" alt="User account">
+            </button>
+        </div>
+    </nav>
+
+    <main class="watch-main-content">
+        <div class="watch-container">
+            <!-- Left: Main Video Player -->
+            <div class="primary-content">
+                <div class="video-player-wrapper">
+                    <video id="mainVideoPlayer" controls autoplay>
+                        <source id="videoSource" src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <h1 class="watch-video-title" id="watchTitle">Loading Title...</h1>
+                
+                <div class="watch-video-primary-info">
+                    <div class="watch-channel-info">
+                        <img src="" class="watch-channel-avatar" id="watchChannelAvatar" alt="Channel Avatar">
+                        <div class="watch-channel-text">
+                            <h3 id="watchChannelName">Loading Channel...</h3>
+                            <p class="watch-subscribers">1.5M subscribers</p>
+                        </div>
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                    
+                    <div class="watch-actions">
+                        <div class="action-btn-group">
+                            <button class="action-btn like-btn" id="likeBtn"><i class="far fa-thumbs-up"></i> <span id="likeCount">12K</span></button>
+                            <div class="action-divider"></div>
+                            <button class="action-btn dislike-btn"><i class="far fa-thumbs-down"></i></button>
+                        </div>
+                        <button class="action-btn share-btn"><i class="fas fa-share"></i> Share</button>
+                        <button class="action-btn save-btn"><i class="fas fa-list"></i> Save</button>
+                    </div>
+                </div>
+
+                <div class="watch-description-box" id="watchDescriptionBox">
+                    <div class="watch-meta">
+                        <span id="watchViews">Loading views...</span> • <span id="watchUploadTime">Loading time...</span>
+                    </div>
+                    <p id="watchDescription">Loading description...</p>
+                    <button class="show-more-btn" id="showMoreBtn">Show more</button>
+                </div>
+            </div>
+
+            <!-- Right: Recommended Videos -->
+            <div class="secondary-content" id="recommendedList">
+                <!-- Javascript will inject recommended cards here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Mobile Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <div class="bottom-nav-item">
+            <i class="fas fa-bolt"></i>
+            <span>Shorts</span>
+        </div>
+        <div class="bottom-nav-item">
+            <i class="fas fa-plus-circle fa-lg"></i>
+        </div>
+        <div class="bottom-nav-item">
+            <i class="fas fa-tv"></i>
+            <span>Subs</span>
+        </div>
+        <div class="bottom-nav-item">
+            <img src="https://ui-avatars.com/api/?name=UD&background=3b82f6&color=fff" class="user-avatar-small" alt="You">
+            <span>You</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

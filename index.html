@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyTube - Premium Video Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium, sleek video sharing platform experience">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="header">
+        <div class="header-left">
+            <button class="menu-btn" title="Menu" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fas fa-play"></i></div>
+                <span class="logo-text">MyTube</span>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search MyTube...">
+                <button class="search-button" id="searchBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="voice-search" id="voiceSearchBtn" title="Search with your voice">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <button class="nav-icon mobile-only-search" title="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="nav-icon hidden-mobile" title="Create">
+                <i class="fas fa-video"></i>
+            </button>
+            <button class="nav-icon" title="Notifications">
+                <i class="fas fa-bell"></i>
+                <div class="badge">9+</div>
+            </button>
+            <button class="nav-icon user-nav" title="Account">
+                <img src="https://ui-avatars.com/api/?name=UD&background=6c5ce7&color=fff" class="user-avatar" alt="User account">
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-bolt"></i>
+                <span>Shorts</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-tv"></i>
+                <span>Subscriptions</span>
+            </div>
+            <hr class="sidebar-divider">
+            <div class="sidebar-item">
+                <i class="fas fa-folder"></i>
+                <span>Library</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fas fa-history"></i>
+                <span>History</span>
+            </div>
+            <div class="sidebar-item hidden-mobile">
+                <i class="fas fa-clock"></i>
+                <span>Watch Later</span>
+            </div>
+            <div class="sidebar-item hidden-mobile">
+                <i class="fas fa-thumbs-up"></i>
+                <span>Liked Videos</span>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <header class="content-header">
+                <h2 id="sectionTitle" class="section-title">Home</h2>
+            </header>
+            
+            <!-- Video Grid -->
+            <section class="video-grid" id="videoGrid">
+            </section>
+        </div>
+    </main>
+
+    <!-- Bottom Mobile Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <div class="bottom-nav-item">
+            <i class="fas fa-bolt"></i>
+            <span>Shorts</span>
+        </div>
+        <div class="bottom-nav-item">
+            <i class="fas fa-plus-circle fa-lg"></i>
+        </div>
+        <div class="bottom-nav-item">
+            <i class="fas fa-tv"></i>
+            <span>Subs</span>
+        </div>
+        <div class="bottom-nav-item">
+            <img src="https://ui-avatars.com/api/?name=UD&background=3b82f6&color=fff" class="user-avatar-small" alt="You">
+            <span>You</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
